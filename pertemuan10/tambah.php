@@ -36,27 +36,27 @@ if( isset($_POST["submit"]) ){
     <ul>
         <li>
         <label for="isbn">ISBN:</label>
-        <input type="text" name="isbn" id="isbn">
+        <input type="text" name="isbn" id="isbn" required>
         </li>
 
         <li>
         <label for="judul">Judul:</label>
-        <input type="text" name="judul" id="judul">
+        <input type="text" name="judul" id="judul" required>
         </li>
 
         <li>
         <label for="penulis">Penulis:</label>
-        <input type="text" name="penulis" id="penulis">
+        <input type="text" name="penulis" id="penulis" required>
         </li>
    
         <li>
         <label for="penerbit">Penerbit:</label>
-        <input type="text" name="penerbit" id="penerbit">
+        <input type="text" name="penerbit" id="penerbit" required>
         </li>
 
         <li>
         <label for="gambar">Gambar:</label>
-        <input type="text" name="gambar" id="gambar">
+        <input type="text" name="gambar" id="gambar" required>
         </li>
         <br>
         <button type="submit" name="submit">Tambah Data</button>

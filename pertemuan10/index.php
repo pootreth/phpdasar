@@ -31,8 +31,8 @@ $book = query("SELECT * FROM books");
     <tr>
         <td><?= $i ?></td>
         <td>
-            <a href="">Ubah</a> |
-            <a href="">hapus</a>
+            <a href="edit.php">Ubah</a> |
+            <a href="hapus.php?id=<?= $row["id"]; ?>" onclick="return confirm('Apakah anda yakin ingin menghapus data ini?');" >hapus</a>
         </td>
         <td>
             <img src="img/<?= $row["gambar"]; ?>" width="75">
