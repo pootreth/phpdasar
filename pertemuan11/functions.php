@@ -2,7 +2,6 @@
 // koneksi ke database
 $db = mysqli_connect("localhost", "root", "", "phpdasar");
 
-
 function query($query){
     global $db;
     $result = mysqli_query($db, $query);
@@ -16,6 +15,7 @@ function query($query){
 
 function tambah($data){
     global $db;
+
     // ambil data dari tiap elemen dalam form
     $isbn = htmlspecialchars($data["isbn"]);
     $judul = htmlspecialchars($data["judul"]);
@@ -33,6 +33,25 @@ function tambah($data){
 function hapus($id) {
     global $db;
     mysqli_query($db, "DELETE FROM books WHERE id=$id");
+
+    return mysqli_affected_rows($db);
+}
+
+function ubah(){
+    global $db;
+
+    // ambil data dari tiap elemen dalam form
+    $id = $_POST["id"];
+    $isbn = htmlspecialchars($_POST["isbn"]);
+    $judul = htmlspecialchars($_POST["judul"]);
+    $penulis = htmlspecialchars($_POST["penulis"]);
+    $penerbit = htmlspecialchars($_POST["penerbit"]);
+    $gambar = htmlspecialchars($_POST["gambar"]);
+
+    // query update data
+    $query = "UPDATE books SET isbn = '$isbn', judul = '$judul', penulis = '$penulis', penerbit = '$penerbit', gambar = '$gambar' WHERE id = $id";
+
+    mysqli_query($db, $query);
 
     return mysqli_affected_rows($db);
 }
