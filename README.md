@@ -5,7 +5,7 @@
 Credit:
 [Web Programming UNPAS](https://www.youtube.com/playlist?list=PLFIM0718LjIUqXfmEIBE3-uzERZPh3vp6)
 
-### Pertemuan 1 - 
+### Pertemuan 1 - Persiapan Environment PHP
 
 ### Pertemuan 2 - Sintaks PHP
 
